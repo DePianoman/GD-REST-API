@@ -1,0 +1,282 @@
+<html>
+    <head>
+        <title>
+            Geometry Dash RESTful API - GDNewbie
+        </title>
+    </head>
+    <body>
+        <h1>
+            <u>/level</u>
+        </h1>
+        <h3>
+            /level/{NAME}
+        </h3>
+        <p>
+            Gets info about a level with the name "{NAME}"
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b><br>Params:</i><br><i>&emsp;None</i><br>
+        </p>
+        <h3>
+            /level/featured
+        </h3>
+        <p>
+            Gets the levels on a specified featured page
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b><br>Params:</i><br>&emsp;•&nbsp;page = <i>The page in which you want the levels of - int</i><br><br>
+        </p>
+        <h3>
+            /level/halloffame
+        </h3>
+        <p>
+            Gets the levels on a specified Hall of Fame page
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b><br>Params:</i><br>&emsp;•&nbsp;page = <i>The page in which you want the levels of - int</i><br><br>
+        </p>
+        <h3>
+            /level/mappacks
+        </h3>
+        <p>
+            Gets the levels in the Map Packs
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b><br>Params:</i><br><i>&emsp;None</i><br>
+        </p>
+        <h1>
+            <u>/user</u>
+        </h1>
+        <h3>
+            /user/{NAME}
+        </h3>
+        <p>
+            Gets info about a user with the name "{NAME}"
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b><br>Params:</i><br><i>&emsp;None</i><br>
+        </p>
+        <h3>
+            /user/{NAME}/friends
+        </h3>
+        <p>
+            Gets a user's friends
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b><br>Params:</i><br>&emsp;•&nbsp;password = <i>The password of the account - str</i><br><br>
+        </p>
+        <h3>
+            /user/{NAME}/accountcomments
+        </h3>
+        <p>
+            Gets a user's account comments
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b><br>Params:</i><br><i>&emsp;None</i><br>
+        </p>
+        <h3>
+            /user/{NAME}/levelcomments
+        </h3>
+        <p>
+            Gets a user's level comments
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b><br>Params:</i><br><i>&emsp;None</i><br>
+        </p>
+        <h3>
+            /user/{NAME}/friends/request
+        </h3>
+        <p>
+            Send a friend request to a user
+            <br>
+            <i>&nbsp;•&nbsp;<b>POST</b>
+                <br>Params:
+            </i>
+            <br>&emsp;•&nbsp;password = <i>The password of {NAME}'s account - str</i>
+            <br>&emsp;•&nbsp;name = <i>The name of the account you will send the friend request to - str</i>
+            <br>&emsp;•&nbsp;comment = <i>The comment for the request - str</i>
+            <br>
+            <br>
+        </p>
+        <h3>
+            /user/{NAME}/friends/accept
+        </h3>
+        <p>
+            Accept a user's friend request
+            <br>
+            <i>&nbsp;•&nbsp;<b>POST</b>
+                <br>Params:
+            </i>
+            <br>&emsp;•&nbsp;password = <i>The password of {NAME}'s account - str</i>
+            <br>&emsp;•&nbsp;name = <i>The name of the account who sent the friend request - str</i>
+            <br>
+            <br>
+        </p>
+        <h3>
+            /user/{NAME}/friends/deny
+        </h3>
+        <p>
+            Deny a user's friend request
+            <br>
+            <i>&nbsp;•&nbsp;<b>POST</b>
+                <br>Params:
+            </i>
+            <br>&emsp;•&nbsp;password = <i>The password of {NAME}'s account - str</i>
+            <br>&emsp;•&nbsp;name = <i>The name of the account who sent the friend request - str</i>
+            <br>
+            <br>
+        </p>
+        <h3>
+            /user/{NAME}/block
+        </h3>
+        <p>
+            Block a user
+            <br>
+            <i>&nbsp;•&nbsp;<b>POST</b>
+                <br>Params:
+            </i>
+            <br>&emsp;•&nbsp;password = <i>The password of {NAME}'s account - str</i>
+            <br>&emsp;•&nbsp;name = <i>The name of the account to block - str</i>
+            <br>
+            <br>
+        </p>
+        <h3>
+            /user/{NAME}/unblock
+        </h3>
+        <p>
+            Unblock a user
+            <br>
+            <i>&nbsp;•&nbsp;<b>POST</b>
+                <br>Params:
+            </i>
+            <br>&emsp;•&nbsp;password = <i>The password of {NAME}'s account - str</i>
+            <br>&emsp;•&nbsp;name = <i>The name of the account to unblock - str</i>
+            <br>
+            <br>
+        </p>
+        <h3>
+            /user/{NAME}/accountcomments/post
+        </h3>
+        <p>
+            Accept a user's friend request
+            <br>
+            <i>&nbsp;•&nbsp;<b>POST</b>
+                <br>Params:
+            </i>
+            <br>&emsp;•&nbsp;password = <i>The password of {NAME}'s account - str</i>
+            <br>&emsp;•&nbsp;name = <i>The name of the account who sent the friend request - str</i>
+            <br>
+            <br>
+        </p>
+        <h3>
+            /user/{NAME}/level
+        </h3>
+        <p>
+            Get a user's level
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b>
+                <br>Params:
+            </i>
+            <br>&emsp;<i>None</i>
+            <br>
+            <br>
+        </p>
+        <h3>
+            /user/{NAME}/updatesettings
+        </h3>
+        <p>
+            Updates a user's settings
+            <br>
+            <i>&nbsp;•&nbsp;<b>POST</b>
+                <br>Params:
+            </i>
+            <br>&emsp;•&nbsp;password = <i>The password of {NAME}'s account - str</i>
+            <br>&emsp;•&nbsp;amf = <i>Who you want to allow messages from - str | options: all, friends, none</i>
+            <br>&emsp;•&nbsp;afrf = <i>Who you want to allow friend requests from - str | options: all, none</i>
+            <br>&emsp;•&nbsp;scht = <i>Who you want to show your level comment history to - str | options: all, friends, none</i>
+            <br>&emsp;•&nbsp;yt = <i>Your youtube tag - str | example: UCZoN2WLAooS6uhREa9Cgpwg</i>
+            <br>&emsp;•&nbsp;twitter = <i>Your twitter name - str | example: DePianoman2004</i>
+            <br>&emsp;•&nbsp;twitch = <i>Your twitch name - str | example: depianoman</i>
+            <br>
+            <br>
+        </p>
+        <h3>
+            /user/{NAME}/sendmessage
+        </h3>
+        <p>
+            Send a message to someone
+            <br>
+            <i>&nbsp;•&nbsp;<b>POST</b>
+                <br>Params:
+            </i>
+            <br>&emsp;•&nbsp;password = <i>The password of {NAME}'s account - str</i>
+            <br>&emsp;•&nbsp;name = <i>The user to send the message to - str</i>
+            <br>&emsp;•&nbsp;subject = <i>The subject of the message - str</i>
+            <br>&emsp;•&nbsp;body = <i>The body of the message - str</i>
+            <br>
+            <br>
+        </p>
+        <h1>
+            <u>/leaderboard</u>
+        </h1>
+        <h3>
+            /leaderboard/{NAME}/friends
+        </h3>
+        <p>
+            Get the "Friends" tab of someone's leaderboard
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b>
+                <br>Params:
+            </i>
+            <br>&emsp;•&nbsp;password = <i>The password of {NAME}'s account - str</i>
+            <br>
+            <br>
+        </p>
+        <h3>
+            /leaderboard/{NAME}/local
+        </h3>
+        <p>
+            Get the "Local" tab of someone's leaderboard
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b>
+                <br>Params:
+            </i>
+            <br>&emsp;•&nbsp;password = <i>The password of {NAME}'s account - str</i>
+            <br>
+            <br>
+        </p>
+        <h3>
+            /leaderboard
+        </h3>
+        <p>
+            Get the "Top" tab of the leaderboard
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b><br>Params:</i><br><i>&emsp;None</i><br>
+        </p>
+        <h3>
+            /leaderboard/creators
+        </h3>
+        <p>
+            Get the "Creators" tab of the leaderboard
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b><br>Params:</i><br><i>&emsp;None</i><br>
+        </p>
+        <h1><u>Misc.</u></h1>
+        <h3>
+            /daily
+        </h3>
+        <p>
+            Gets info on the daily level
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b><br>Params:</i><br><i>&emsp;None</i><br>
+        </p>
+        <h3>
+            /weekly
+        </h3>
+        <p>
+            Gets info on the weekly level
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b><br>Params:</i><br><i>&emsp;None</i><br>
+        </p>
+        <h3>
+            /gauntlets
+        </h3>
+        <p>
+            Gets info on the gauntlets' levels
+            <br>
+            <i>&nbsp;•&nbsp;<b>GET</b><br>Params:</i><br><i>&emsp;None</i><br>
+        </p>
+    </body>
+</html>
